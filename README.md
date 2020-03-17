@@ -9,7 +9,7 @@ Fitur yang tak kalah pentingnya dari MCU ini yaitu native USB, yang mana bisa me
 Dan masih sangat banyak yang bisa kamu lakukan dengan board ini. Kenapa alasannya kamu harus coba NCII ini? karena why not? Board ini simple yet functional serta open source. Link untuk file design EDA disediakan dibawah, kalian bebas melakukan modifikasi sesuai kebutuhan. Semoga bermanfaat dan selamat berkarya!
 
 ## How to Use
-Cukup hubungkan PCB NCII ke PC menggunakan kabel MicroUSB (atau HP via OTG). Buka IDE kesukaanmu dan pilih board Arduino Micro (default). Pinout bisa dilihat di secara lengkap di file skematik. Untuk fitur USB HID, kalian bisa mempelajarinya secara lengkap di dokumentasi [keyboard](https://www.arduino.cc/reference/en/language/functions/usb/keyboard/) dan [mouse](https://www.arduino.cc/reference/en/language/functions/usb/mouse/) pada link tersebut. Beberapa contoh juga disediakan di folder example sebagai referensi, tapi yang terpenting imajinasi dan kode dari kalian sendirilah yang bisa membuat board ini jadi lebih bermakna.
+Cukup hubungkan PCB NCII ke PC menggunakan kabel MicroUSB (atau HP via OTG). Buka IDE kesukaanmu dan pilih board Arduino Micro (default). Pinout bisa dilihat secara lengkap di file skematik. Untuk fitur USB HID, kalian bisa mempelajarinya secara lengkap di dokumentasi [keyboard](https://www.arduino.cc/reference/en/language/functions/usb/keyboard/) dan [mouse](https://www.arduino.cc/reference/en/language/functions/usb/mouse/) pada link tersebut. Beberapa contoh juga disediakan di folder example sebagai referensi, tapi yang terpenting imajinasi dan kode dari kalian sendirilah yang bisa membuat board ini jadi lebih bermakna.
 
 ## Bill of Materials
 |Designator|Qty|Name/Value	|Footprint|
