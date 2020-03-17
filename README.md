@@ -25,9 +25,10 @@ Cukup hubungkan PCB NCII ke PC menggunakan kabel MicroUSB (atau HP via OTG). Buk
 |SW4,SW5,SW6,SW7,SW2,SW3|6|Tack Switch|3X6X2.5_SMD|
 |CN1|1|MicroUSB|MICRO-USB-16|
 
-## Design
+## Design 
+<img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-pcb-ss.png" width="600">  
 
-Board ini design dengan software web based EasyEDA, silahkan digunakan sebaik mungkin.  
+Design NCII ini berlisensi open source hardware, silahkan dimanfaatkan secara bijaksana.  
 Link: https://easyeda.com/sentsor-project/sentsor-namecard
 
 ## Gallery
