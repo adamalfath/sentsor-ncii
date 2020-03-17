@@ -1,6 +1,8 @@
+# SENTSOR Name Card Information Injector
 ## Introduction
 <img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-img0.jpg" width="600">  
-NCII ini bukanlah panggilan buat guru ya (encik guru a.k.a. cikgu) dan juga bukan berasal dari cici yang senantiasa menemani koko :D. NCII merupakan singkatan dari Namecard Information Injector yaitu sebuah kartu nama (NC) dengan dimensi standar ID-1 (ISO/IEC 7810) yang dibekali sirkuit mikrokontroler fungsional. MCU yang digunakan adalah ATmega32U4 yang kompatible dengan bootloader Arduino (ex: Micro, Leonardo) sehingga dapat memudahkan pengguna untuk bereksporasi, memainkan basic input/output berupa push button & LED, bahkan untuk pemula sekalipun.  
+
+NCII ini bukanlah panggilan buat guru ya (encik guru a.k.a. cikgu) dan juga bukan berasal dari cici yang senantiasa menemani koko :D. NCII merupakan singkatan dari Name Card Information Injector yaitu sebuah kartu nama (NC) dengan dimensi standar ID-1 (ISO/IEC 7810) yang dibekali sirkuit mikrokontroler fungsional. MCU yang digunakan adalah ATmega32U4 yang kompatible dengan bootloader Arduino (ex: Micro, Leonardo) sehingga dapat memudahkan pengguna untuk bereksporasi, memainkan basic input/output berupa push button & LED, bahkan untuk pemula sekalipun.
 
 Fitur yang tak kalah pentingnya dari MCU ini yaitu native USB, yang mana bisa menjadikan board ini berfungsi sebagai USB HID seperti mensimulasikan fungsi keyboard atau mouse. Hal inilah yang membuat board ini memiliki fitur injeksi informasi (II), dengan memprogram board ini sebagai USB HID, kita bisa secara otomatis mengetikan informasi pada host. Sebagai contoh: injeksi tulisan; malas ngetik email? atau punya email kerja/email personal/email bisnis dan alamat email berjibun lainnya? klik NCII; malas nulis nama lengkap? klik NCII; alamat rumah yang panjang? klik NCII; ngantor, nyalain PC dan langsung buka program favorit (cie favorit), jreng, office+spotify+chrome+vscode langsung muncul, alternatif tanpa harus ngubah startup di PC. Atau disaat jobfair dan orang lain masih bawa CV kertas, kamu sodorkan NCII ini sebagai kartu nama kamu, interview dengan PD sambil ditemani NCII, porfolio real kamu lalu kasih tau cara pakainya, boom, *and that's how you impress them*.  
 
@@ -33,6 +35,9 @@ Design NCII ini berlisensi open source hardware, silahkan dimanfaatkan secara bi
 Link: https://easyeda.com/sentsor-project/sentsor-namecard
 
 ## Gallery
+<img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-img1.jpg" width="400"> <img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-img2.jpg" width="400">  
+<img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-img3.jpg" width="400"> <img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-img4.jpg" width="400">
+<img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-img5.jpg" width="400"> <img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-img6.jpg" width="400">
 
 ## Information
 SENTSOR  
