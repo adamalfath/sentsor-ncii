@@ -11,6 +11,9 @@ Dan masih sangat banyak yang bisa kamu lakukan dengan board ini. Kenapa alasanny
 ## How to Use
 Cukup hubungkan PCB NCII ke PC menggunakan kabel MicroUSB (atau HP via OTG). Buka IDE kesukaanmu dan pilih board Arduino Micro (default). Pinout bisa dilihat secara lengkap di file skematik. Untuk fitur USB HID, kalian bisa mempelajarinya secara lengkap di dokumentasi [keyboard](https://www.arduino.cc/reference/en/language/functions/usb/keyboard/) dan [mouse](https://www.arduino.cc/reference/en/language/functions/usb/mouse/) pada link tersebut. Beberapa contoh juga disediakan di folder example sebagai referensi, tapi yang terpenting imajinasi dan kode dari kalian sendirilah yang bisa membuat board ini jadi lebih bermakna.
 
+**PERHATIAN!**
+Dengan mengaktifkan fungsi HID, board NCII akan bertindak layaknya input keyboard dan mouse yang asli. Pastikan kalian jeli mengontrol syntax terkait.
+
 ## Bill of Materials
 |Designator|Qty|Name/Value	|Footprint|
 |-|-|-|-|
