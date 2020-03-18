@@ -31,7 +31,8 @@ Cukup hubungkan PCB NCII ke PC menggunakan kabel MicroUSB (atau HP via OTG). Buk
 ## Design 
 <img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-pcb-ss.png" width="600">  
 
-Design NCII ini berlisensi open source hardware, silahkan dimanfaatkan secara bijaksana.  
+NCII merupakan open source hardware berlisensi CC BY-SA 4.0, silahkan dimanfaatkan secara bijaksana.  
+
 Link: https://easyeda.com/sentsor-project/sentsor-namecard
 
 ## Gallery
@@ -45,3 +46,5 @@ Author: Adam Alfath
 Contact: adam.alfath23@gmail.com  
 Web: [sentsor.net](http://www.sentsor.net)  
 Repo: [SENTSOR Main Repo](http://github.com/adamalfath/sentsor)
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">SENTSOR</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
