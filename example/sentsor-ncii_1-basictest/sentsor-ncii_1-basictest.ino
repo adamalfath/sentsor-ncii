@@ -126,7 +126,7 @@ void output3() {
   }
   else {
     //Statement to run if button 3 pressed with switch 2 LOW
-    Serial.print(F("Button 2 pressed, switch 2 LOW, function output3()-2 called\n"));
+    Serial.print(F("Button 3 pressed, switch 2 LOW, function output3()-2 called\n"));
     Serial.print(F("Blink LED 3x for 2x\n"));
     delay(1000); heartbeat(3); delay(1000); heartbeat(3);
   }
