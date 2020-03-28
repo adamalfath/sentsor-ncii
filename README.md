@@ -34,7 +34,7 @@ Dengan mengaktifkan fungsi HID, board NCII akan bertindak layaknya input keyboar
 ## Design 
 <img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-pcb-ss.png" width="600">  
 
-NCII merupakan open source hardware berlisensi CC BY-SA 4.0, silahkan dimanfaatkan secara bijaksana.  
+NCII merupakan open source hardware, silahkan dimanfaatkan secara bijaksana.  
 
 Link: https://easyeda.com/sentsor-project/sentsor-namecard
 
