@@ -18,9 +18,9 @@ Dengan mengaktifkan fungsi HID, board NCII akan bertindak layaknya input keyboar
 |Designator|Qty|Name/Value	|Footprint|
 |-|-|-|-|
 |U1|1|ATMEGA32U4-AU|QFP-44|
-|R1|1|10K|R0603|
-|R3,R2|2|22	|R0603|
-|R10,R6,R13,R12,R11,R9,R8,R7,R5,R4|10|1K|R0603|
+|R1|1|10k|R0603|
+|R3,R2|2|22|R0603|
+|R10,R6,R13,R12,R11,R9,R8,R7,R5,R4|10|1k|R0603|
 |R14|1|330|R0603|
 |C2,C1|2|22p|C0603
 |C3|1|100n|C0603|
