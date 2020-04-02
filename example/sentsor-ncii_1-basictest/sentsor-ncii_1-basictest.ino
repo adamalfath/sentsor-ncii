@@ -151,10 +151,10 @@ void output5() {
   //Statement to run if button 5 pressed
   Serial.print(F("Button 5 pressed\n"));
   Serial.print(F("Switch position : "));
-  Serial.print(digitalRead(sw0) ? '1' : '0');
-  Serial.print(digitalRead(sw1) ? '1' : '0');
-  Serial.print(digitalRead(sw2) ? '1' : '0');
-  Serial.print(digitalRead(sw3) ? '1' : '0');
+  Serial.print(digitalRead(sw0));
+  Serial.print(digitalRead(sw1));
+  Serial.print(digitalRead(sw2));
+  Serial.print(digitalRead(sw3));
   Serial.print('\n');
 }
 
@@ -177,10 +177,10 @@ void debug() {
     Serial.print(F("bt3=")); Serial.print(digitalRead(bt3)); Serial.print(' ');
     Serial.print(F("bt4=")); Serial.print(digitalRead(bt4)); Serial.print(' ');
     Serial.print(F("bt5=")); Serial.print(digitalRead(bt5)); Serial.print(' ');
-    Serial.print(F("sw0=")); Serial.print(digitalRead(sw0) ? '1' : '0'); Serial.print(' ');
-    Serial.print(F("sw1=")); Serial.print(digitalRead(sw1) ? '1' : '0'); Serial.print(' ');
-    Serial.print(F("sw2=")); Serial.print(digitalRead(sw2) ? '1' : '0'); Serial.print(' ');
-    Serial.print(F("sw3=")); Serial.print(digitalRead(sw3) ? '1' : '0'); Serial.print('\n');
+    Serial.print(F("sw0=")); Serial.print(digitalRead(sw0)); Serial.print(' ');
+    Serial.print(F("sw1=")); Serial.print(digitalRead(sw1)); Serial.print(' ');
+    Serial.print(F("sw2=")); Serial.print(digitalRead(sw2)); Serial.print(' ');
+    Serial.print(F("sw3=")); Serial.print(digitalRead(sw3)); Serial.print('\n');
     heartbeat(1);
     delay(1000);
   }

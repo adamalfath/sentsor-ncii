@@ -163,10 +163,10 @@ void output5() {
   boolean correctKey=true;
 
   //Check switch combination for key
-  if((digitalRead(sw0) ? 1 : 0)!=key[0]) correctKey=false;
-  if((digitalRead(sw1) ? 1 : 0)!=key[1]) correctKey=false;
-  if((digitalRead(sw2) ? 1 : 0)!=key[2]) correctKey=false;
-  if((digitalRead(sw3) ? 1 : 0)!=key[3]) correctKey=false;
+  if((digitalRead(sw0))!=key[0]) correctKey=false;
+  if((digitalRead(sw1))!=key[1]) correctKey=false;
+  if((digitalRead(sw2))!=key[2]) correctKey=false;
+  if((digitalRead(sw3))!=key[3]) correctKey=false;
 
   if(correctKey) {
     Keyboard.print("Yay! You have the correct key.\r\n");
