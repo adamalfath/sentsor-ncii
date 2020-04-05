@@ -11,6 +11,8 @@ Dan masih sangat banyak yang bisa kamu lakukan dengan board ini. Kenapa alasanny
 ## How to Use
 Cukup hubungkan PCB NCII ke PC menggunakan kabel MicroUSB (atau HP via OTG). Buka IDE kesukaanmu dan pilih board Arduino Micro (default). Pinout bisa dilihat secara lengkap di file skematik. Untuk fitur USB HID, kalian bisa mempelajarinya secara lengkap di dokumentasi [keyboard](https://www.arduino.cc/reference/en/language/functions/usb/keyboard/) dan [mouse](https://www.arduino.cc/reference/en/language/functions/usb/mouse/) pada link tersebut. Beberapa contoh juga disediakan di folder example sebagai referensi, tapi yang terpenting imajinasi dan kode dari kalian sendirilah yang bisa membuat board ini jadi lebih bermakna.
 
+**DEMO:** https://www.youtube.com/watch?v=JQNkF4G7ug0
+
 **PERHATIAN!**
 Dengan mengaktifkan fungsi HID, board NCII akan bertindak layaknya input keyboard dan mouse yang asli. Pastikan kalian jeli mengontrol syntax terkait.
 
@@ -42,6 +44,11 @@ Link: https://easyeda.com/sentsor-project/sentsor-namecard
 <img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-img1.jpg" width="400"> <img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-img2.jpg" width="400">  
 <img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-img3.jpg" width="400"> <img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-img4.jpg" width="400">
 <img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-img5.jpg" width="400"> <img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-img6.jpg" width="400">
+
+## Support Open-Source Hardware & SENTSOR!
+Bila kalian tertarik dengan produk-produk SENTSOR, kalian bisa cek marketplace di link berikut:  
+https://www.tokopedia.com/gerai-sagalarupa/etalase/sentsor-product  
+Support kalian akan sangat membantu untuk pengembangan open-source hardware dari SENTSOR selanjutnya.
 
 ## Information
 SENTSOR  
