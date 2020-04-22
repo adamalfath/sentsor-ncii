@@ -46,8 +46,10 @@ Link: https://easyeda.com/sentsor-project/sentsor-namecard
 <img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-img5.jpg" width="400"> <img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/ncii-img6.jpg" width="400">
 
 ## Support Open-Source Hardware & SENTSOR!
-Bila kalian tertarik dengan produk-produk SENTSOR, kalian bisa cek marketplace di link berikut:  
-https://www.tokopedia.com/gerai-sagalarupa/etalase/sentsor-product  
+Bila kalian tertarik dengan produk-produk SENTSOR, kalian bisa cek marketplace ataupun memberikan donasi pada link berikut:  
+
+[![Store](https://img.shields.io/badge/marketplace-Tokopedia-brightgreen.svg)](https://www.tokopedia.com/gerai-sagalarupa/etalase/sentsor-product)  [![Donate](https://img.shields.io/badge/donate-PayPal-blue.svg)](https://www.paypal.me/adamalfath)  
+
 Support kalian akan sangat membantu untuk pengembangan open-source hardware dari SENTSOR selanjutnya.
 
 ## Information
