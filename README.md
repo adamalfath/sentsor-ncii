@@ -59,4 +59,5 @@ Contact: adam.alfath23@gmail.com
 Web: [sentsor.net](http://www.sentsor.net)  
 Repo: [SENTSOR Main Repo](http://github.com/adamalfath/sentsor)
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">SENTSOR NCII</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+<img src="https://github.com/adamalfath/sentsor-ncii/blob/master/media/OSHW_ID000003.png" width="80"><br/><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a><br/>
+SENTSOR Name Card Information Injector is a certified open source hardware project UID <a rel="certification" href="https://certification.oshwa.org/id000003.html">ID000003</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
