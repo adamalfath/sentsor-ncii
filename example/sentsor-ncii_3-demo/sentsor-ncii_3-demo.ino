@@ -1,19 +1,17 @@
 /* =====================================================================
-   __  __      _____  ______  _   _  _______   _____   ____   _____ 
-   \ \ \ \    / ____||  ____|| \ | ||__   __| / ____| / __ \ |  __ \    
- __ \ \ \ \  | (___  | |__   |  \| |   | |   | (___  | |  | || |__) |   
- \ \ \ \ \_\  \___ \ |  __|  |     |   | |    \___ \ | |  | ||  _  /    
-  \ \ \ \     ____) || |____ | |\  |   | |    ____) || |__| || | \ \    
-   \_\ \_\   |_____/ |______||_| \_|   |_|   |_____/  \____/ |_|  \_\   
+   __  __      _____  ______  _   _  _______   _____   ____   _____
+   \ \ \ \    / ____||  ____|| \ | ||__   __| / ____| / __ \ |  __ \
+ __ \ \ \ \  | (___  | |__   |  \| |   | |   | (___  | |  | || |__) |
+ \ \ \ \ \_\  \___ \ |  __|  |     |   | |    \___ \ | |  | ||  _  /
+  \ \ \ \     ____) || |____ | |\  |   | |    ____) || |__| || | \ \
+   \_\ \_\   |_____/ |______||_| \_|   |_|   |_____/  \____/ |_|  \_\
 
  Project      : Name Card Information Injector (NCII) - Demo
  Description  : NCII name card demo
  Author       : SENTSOR
- Version      : 1.0.0 - Initial Build
  Note         : Using ATmega32u4 with Arduino Micro bootloader
- 
 ===================================================================== */
- 
+
 //Pin definition
 #define led 5
 #define bt0 10
@@ -33,50 +31,68 @@
 #include <Keyboard.h>
 
 void setup() {
-  pinMode(led,OUTPUT);
-  pinMode(bt0,INPUT);
-  pinMode(bt1,INPUT);
-  pinMode(bt2,INPUT);
-  pinMode(bt3,INPUT);
-  pinMode(bt4,INPUT);
-  pinMode(bt5,INPUT);
-  pinMode(sw0,INPUT);
-  pinMode(sw1,INPUT);
-  pinMode(sw2,INPUT);
-  pinMode(sw3,INPUT);
-  
+  pinMode(led, OUTPUT);
+  pinMode(bt0, INPUT);
+  pinMode(bt1, INPUT);
+  pinMode(bt2, INPUT);
+  pinMode(bt3, INPUT);
+  pinMode(bt4, INPUT);
+  pinMode(bt5, INPUT);
+  pinMode(sw0, INPUT);
+  pinMode(sw1, INPUT);
+  pinMode(sw2, INPUT);
+  pinMode(sw3, INPUT);
+
   Keyboard.begin();
   intro();
 }
 
 void loop() {
-  static boolean keyPressed=false;
+  static boolean keyPressed = false;
   static uint32_t timer;
-  
-  if(digitalRead(bt0)) {output0(); keyPressed=true;}
-  if(digitalRead(bt1)) {output1(); keyPressed=true;}
-  if(digitalRead(bt2)) {output2(); keyPressed=true;}
-  if(digitalRead(bt3)) {output3(); keyPressed=true;}
-  if(digitalRead(bt4)) {output4(); keyPressed=true;}
-  if(digitalRead(bt5)) {output5(); keyPressed=true;}
 
-  if(keyPressed) {
+  if (digitalRead(bt0)) {
+    output0();
+    keyPressed = true;
+  }
+  if (digitalRead(bt1)) {
+    output1();
+    keyPressed = true;
+  }
+  if (digitalRead(bt2)) {
+    output2();
+    keyPressed = true;
+  }
+  if (digitalRead(bt3)) {
+    output3();
+    keyPressed = true;
+  }
+  if (digitalRead(bt4)) {
+    output4();
+    keyPressed = true;
+  }
+  if (digitalRead(bt5)) {
+    output5();
+    keyPressed = true;
+  }
+
+  if (keyPressed) {
     //Blink indicator LED if key pressed
     heartbeat(1);
     delay(500); //Add small delay as simple debouncing
-    keyPressed=false;
-    timer=millis();
+    keyPressed = false;
+    timer = millis();
   }
 
-  if(millis()-timer>=HEARTBEAT_INTERVAL) {
+  if (millis() - timer >= HEARTBEAT_INTERVAL) {
     heartbeat(1);
-    timer=millis();
+    timer = millis();
   }
 }
 
 void intro() {
   delay(3000); //Settle down
-  
+
   //Simulate WIN+R command to open Run dialog
   Keyboard.press(KEY_LEFT_GUI);
   Keyboard.press('r');
@@ -106,7 +122,7 @@ void output0() {
 }
 
 void output1() {
-  if(digitalRead(sw0)) {
+  if (digitalRead(sw0)) {
     Keyboard.print("adam.alfath23@gmail.com\r\n");
   }
   else {
@@ -118,7 +134,7 @@ void output1() {
 }
 
 void output2() {
-  if(digitalRead(sw1)) {
+  if (digitalRead(sw1)) {
     Keyboard.print("+6289657609886\r\n");
   }
   else {
@@ -130,7 +146,7 @@ void output2() {
 }
 
 void output3() {
-  if(digitalRead(sw2)) {
+  if (digitalRead(sw2)) {
     Keyboard.print("Bandung, West Java, Indonesia\r\n");
   }
   else {
@@ -144,7 +160,7 @@ void output3() {
 }
 
 void output4() {
-  if(digitalRead(sw3)) {
+  if (digitalRead(sw3)) {
     Keyboard.print("Resume\r\n");
     Keyboard.print("Online Resume    : linkedin.com/in/adamalfath\r\n");
     Keyboard.print("\r\n");
@@ -159,32 +175,32 @@ void output4() {
 }
 
 void output5() {
-  const uint8_t key[4]={1,0,1,0};
-  boolean correctKey=true;
+  const uint8_t key[4] = {1, 0, 1, 0};
+  boolean correctKey = true;
 
   //Check switch combination for key
-  if((digitalRead(sw0))!=key[0]) correctKey=false;
-  if((digitalRead(sw1))!=key[1]) correctKey=false;
-  if((digitalRead(sw2))!=key[2]) correctKey=false;
-  if((digitalRead(sw3))!=key[3]) correctKey=false;
+  if ((digitalRead(sw0)) != key[0]) correctKey = false;
+  if ((digitalRead(sw1)) != key[1]) correctKey = false;
+  if ((digitalRead(sw2)) != key[2]) correctKey = false;
+  if ((digitalRead(sw3)) != key[3]) correctKey = false;
 
-  if(correctKey) {
+  if (correctKey) {
     Keyboard.print("Yay! You have the correct key.\r\n");
     Keyboard.print("  __  __      _____  ______  _   _  _______   _____   ____   _____  \r\n");
-    Keyboard.print("  \\ \\ \\ \\    / ____||  ____|| \\ | ||__   __| / ____| / __ \\ |  __ \\ \r\n");    
-    Keyboard.print("__ \\ \\ \\ \\  | (___  | |__   |  \\| |   | |   | (___  | |  | || |__) |\r\n");   
-    Keyboard.print("\\ \\ \\ \\ \\_\\  \\___ \\ |  __|  |     |   | |    \\___ \\ | |  | ||  _  / \r\n");   
-    Keyboard.print(" \\ \\ \\ \\     ____) || |____ | |\\  |   | |    ____) || |__| || | \\ \\ \r\n");   
+    Keyboard.print("  \\ \\ \\ \\    / ____||  ____|| \\ | ||__   __| / ____| / __ \\ |  __ \\ \r\n");
+    Keyboard.print("__ \\ \\ \\ \\  | (___  | |__   |  \\| |   | |   | (___  | |  | || |__) |\r\n");
+    Keyboard.print("\\ \\ \\ \\ \\_\\  \\___ \\ |  __|  |     |   | |    \\___ \\ | |  | ||  _  / \r\n");
+    Keyboard.print(" \\ \\ \\ \\     ____) || |____ | |\\  |   | |    ____) || |__| || | \\ \\ \r\n");
     Keyboard.print("  \\_\\ \\_\\   |_____/ |______||_| \\_|   |_|   |_____/  \\____/ |_|  \\_\\\r\n");
     Keyboard.print("\r\n");
   }
 }
 
 void heartbeat(uint8_t n) {
-  while(n>0) {
-    digitalWrite(led,HIGH);
+  while (n > 0) {
+    digitalWrite(led, HIGH);
     delay(10);
-    digitalWrite(led,LOW);
+    digitalWrite(led, LOW);
     delay(100);
     n--;
   }

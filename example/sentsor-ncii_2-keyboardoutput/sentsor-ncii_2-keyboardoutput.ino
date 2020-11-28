@@ -1,17 +1,16 @@
 /* =====================================================================
-   __  __      _____  ______  _   _  _______   _____   ____   _____ 
-   \ \ \ \    / ____||  ____|| \ | ||__   __| / ____| / __ \ |  __ \    
- __ \ \ \ \  | (___  | |__   |  \| |   | |   | (___  | |  | || |__) |   
- \ \ \ \ \_\  \___ \ |  __|  |     |   | |    \___ \ | |  | ||  _  /    
-  \ \ \ \     ____) || |____ | |\  |   | |    ____) || |__| || | \ \    
-   \_\ \_\   |_____/ |______||_| \_|   |_|   |_____/  \____/ |_|  \_\   
+   __  __      _____  ______  _   _  _______   _____   ____   _____
+   \ \ \ \    / ____||  ____|| \ | ||__   __| / ____| / __ \ |  __ \
+ __ \ \ \ \  | (___  | |__   |  \| |   | |   | (___  | |  | || |__) |
+ \ \ \ \ \_\  \___ \ |  __|  |     |   | |    \___ \ | |  | ||  _  /
+  \ \ \ \     ____) || |____ | |\  |   | |    ____) || |__| || | \ \
+   \_\ \_\   |_____/ |______||_| \_|   |_|   |_____/  \____/ |_|  \_\
 
  Project      : Name Card Information Injector (NCII) - Keyboard Output
  Description  : Outputing text/command using NCII as USB HID Keyboard
  Author       : SENTSOR
- Version      : 1.0.0 - Initial Build
  Note         : Using ATmega32u4 with Arduino Micro bootloader
- 
+
 ===================================================================== */
 
 //Pin definition
@@ -33,54 +32,72 @@
 #include <Keyboard.h>
 
 void setup() {
-  pinMode(led,OUTPUT);
-  pinMode(bt0,INPUT);
-  pinMode(bt1,INPUT);
-  pinMode(bt2,INPUT);
-  pinMode(bt3,INPUT);
-  pinMode(bt4,INPUT);
-  pinMode(bt5,INPUT);
-  pinMode(sw0,INPUT);
-  pinMode(sw1,INPUT);
-  pinMode(sw2,INPUT);
-  pinMode(sw3,INPUT);
+  pinMode(led, OUTPUT);
+  pinMode(bt0, INPUT);
+  pinMode(bt1, INPUT);
+  pinMode(bt2, INPUT);
+  pinMode(bt3, INPUT);
+  pinMode(bt4, INPUT);
+  pinMode(bt5, INPUT);
+  pinMode(sw0, INPUT);
+  pinMode(sw1, INPUT);
+  pinMode(sw2, INPUT);
+  pinMode(sw3, INPUT);
 
   Serial.begin(9600);
   Keyboard.begin();
 }
 
 void loop() {
-  static boolean buttonPressed=false;
+  static boolean buttonPressed = false;
   static uint32_t timer;
 
   //Check button reading with polling method and call function if button pressed
-  if(digitalRead(bt0)) {output0(); buttonPressed=true;}
-  if(digitalRead(bt1)) {output1(); buttonPressed=true;}
-  if(digitalRead(bt2)) {output2(); buttonPressed=true;}
-  if(digitalRead(bt3)) {output3(); buttonPressed=true;}
-  if(digitalRead(bt4)) {output4(); buttonPressed=true;}
-  if(digitalRead(bt5)) {output5(); buttonPressed=true;}
+  if (digitalRead(bt0)) {
+    output0();
+    buttonPressed = true;
+  }
+  if (digitalRead(bt1)) {
+    output1();
+    buttonPressed = true;
+  }
+  if (digitalRead(bt2)) {
+    output2();
+    buttonPressed = true;
+  }
+  if (digitalRead(bt3)) {
+    output3();
+    buttonPressed = true;
+  }
+  if (digitalRead(bt4)) {
+    output4();
+    buttonPressed = true;
+  }
+  if (digitalRead(bt5)) {
+    output5();
+    buttonPressed = true;
+  }
 
-  if(buttonPressed) {
+  if (buttonPressed) {
     //Blink indicator LED if button pressed
     heartbeat(1);
     delay(500); //Add small delay as simple debouncing
-    buttonPressed=false;
-    timer=millis();
+    buttonPressed = false;
+    timer = millis();
   }
 
   //LED Heartbeat - Blink indicator LED when idle to indicate program still running normally
   //Modify 'HEARTBEAT_INTERVAL' value to change blink interval, unit in milliseconds
-  if(millis()-timer>=HEARTBEAT_INTERVAL) {
+  if (millis() - timer >= HEARTBEAT_INTERVAL) {
     heartbeat(1);
-    timer=millis();
+    timer = millis();
   }
 }
 
 void output0() {
   //Statement to run if button 0 pressed
   Serial.print(F("Button 0 pressed, function output0() called\n"));
-  
+
   //Print text via keyboard, "\r\n" in the end used as new line character
   Keyboard.print("Alphabet output: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz\r\n");
 }
@@ -112,7 +129,7 @@ void output4() {
   Serial.print(F("Button 4 pressed, function output4() called\n"));
   Keyboard.print("Deleting text...\r\n");
   delay(2000);
-  
+
   //Simulate CTRL+A DEL
   Keyboard.press(KEY_LEFT_CTRL);
   Keyboard.press('a');
@@ -141,10 +158,10 @@ void output5() {
 
 void heartbeat(uint8_t n) {
   //Blink indicator LED for n-times
-  while(n>0) {
-    digitalWrite(led,HIGH);
+  while (n > 0) {
+    digitalWrite(led, HIGH);
     delay(10);
-    digitalWrite(led,LOW);
+    digitalWrite(led, LOW);
     delay(100);
     n--;
   }

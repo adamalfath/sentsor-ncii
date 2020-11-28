@@ -1,18 +1,17 @@
 /* =====================================================================
-   __  __      _____  ______  _   _  _______   _____   ____   _____ 
-   \ \ \ \    / ____||  ____|| \ | ||__   __| / ____| / __ \ |  __ \    
- __ \ \ \ \  | (___  | |__   |  \| |   | |   | (___  | |  | || |__) |   
- \ \ \ \ \_\  \___ \ |  __|  |     |   | |    \___ \ | |  | ||  _  /    
-  \ \ \ \     ____) || |____ | |\  |   | |    ____) || |__| || | \ \    
-   \_\ \_\   |_____/ |______||_| \_|   |_|   |_____/  \____/ |_|  \_\   
+   __  __      _____  ______  _   _  _______   _____   ____   _____
+   \ \ \ \    / ____||  ____|| \ | ||__   __| / ____| / __ \ |  __ \
+ __ \ \ \ \  | (___  | |__   |  \| |   | |   | (___  | |  | || |__) |
+ \ \ \ \ \_\  \___ \ |  __|  |     |   | |    \___ \ | |  | ||  _  /
+  \ \ \ \     ____) || |____ | |\  |   | |    ____) || |__| || | \ \
+   \_\ \_\   |_____/ |______||_| \_|   |_|   |_____/  \____/ |_|  \_\
 
  Project      : Name Card Information Injector (NCII) - Basic Test
  Description  : Basic input/output: reading pin state, blinking LED,
                 calling function, using NCII
  Author       : SENTSOR
- Version      : 1.0.0 - Initial Build
  Note         : Using ATmega32u4 with Arduino Micro bootloader
- 
+
 ===================================================================== */
 
 //Pin definition
@@ -33,52 +32,70 @@
 #define DEBUG false
 
 void setup() {
-  pinMode(led,OUTPUT);
-  pinMode(bt0,INPUT);
-  pinMode(bt1,INPUT);
-  pinMode(bt2,INPUT);
-  pinMode(bt3,INPUT);
-  pinMode(bt4,INPUT);
-  pinMode(bt5,INPUT);
-  pinMode(sw0,INPUT);
-  pinMode(sw1,INPUT);
-  pinMode(sw2,INPUT);
-  pinMode(sw3,INPUT);
+  pinMode(led, OUTPUT);
+  pinMode(bt0, INPUT);
+  pinMode(bt1, INPUT);
+  pinMode(bt2, INPUT);
+  pinMode(bt3, INPUT);
+  pinMode(bt4, INPUT);
+  pinMode(bt5, INPUT);
+  pinMode(sw0, INPUT);
+  pinMode(sw1, INPUT);
+  pinMode(sw2, INPUT);
+  pinMode(sw3, INPUT);
 
   Serial.begin(9600);
-  
-  #if DEBUG
-    //Enter test mode to stream pin state and blinking LED
-    //Set 'DEBUG' value to 'true' to enter debug mode
-    debug();
-  #endif
+
+#if DEBUG
+  //Enter test mode to stream pin state and blinking LED
+  //Set 'DEBUG' value to 'true' to enter debug mode
+  debug();
+#endif
 }
 
 void loop() {
-  static boolean buttonPressed=false;
+  static boolean buttonPressed = false;
   static uint32_t timer;
 
   //Check button reading with polling method and call function if button pressed
-  if(digitalRead(bt0)) {output0(); buttonPressed=true;}
-  if(digitalRead(bt1)) {output1(); buttonPressed=true;}
-  if(digitalRead(bt2)) {output2(); buttonPressed=true;}
-  if(digitalRead(bt3)) {output3(); buttonPressed=true;}
-  if(digitalRead(bt4)) {output4(); buttonPressed=true;}
-  if(digitalRead(bt5)) {output5(); buttonPressed=true;}
+  if (digitalRead(bt0)) {
+    output0();
+    buttonPressed = true;
+  }
+  if (digitalRead(bt1)) {
+    output1();
+    buttonPressed = true;
+  }
+  if (digitalRead(bt2)) {
+    output2();
+    buttonPressed = true;
+  }
+  if (digitalRead(bt3)) {
+    output3();
+    buttonPressed = true;
+  }
+  if (digitalRead(bt4)) {
+    output4();
+    buttonPressed = true;
+  }
+  if (digitalRead(bt5)) {
+    output5();
+    buttonPressed = true;
+  }
 
-  if(buttonPressed) {
+  if (buttonPressed) {
     //Blink indicator LED if button pressed
     heartbeat(1);
     delay(500); //Add small delay as simple debouncing
-    buttonPressed=false;
-    timer=millis();
+    buttonPressed = false;
+    timer = millis();
   }
 
   //LED Heartbeat - Blink indicator LED when idle to indicate program still running normally
   //Modify 'HEARTBEAT_INTERVAL' value to change blink interval, unit in milliseconds
-  if(millis()-timer>=HEARTBEAT_INTERVAL) {
+  if (millis() - timer >= HEARTBEAT_INTERVAL) {
     heartbeat(1);
-    timer=millis();
+    timer = millis();
   }
 }
 
@@ -88,7 +105,7 @@ void output0() {
 }
 
 void output1() {
-  if(digitalRead(sw0)) {
+  if (digitalRead(sw0)) {
     //Statement to run if button 1 pressed with switch 0 HIGH
     Serial.print(F("Button 1 pressed, switch 0 HIGH, function output1()-1 called\n"));
     Serial.print(F("Blink LED 1x for 1x\n"));
@@ -103,7 +120,7 @@ void output1() {
 }
 
 void output2() {
-  if(digitalRead(sw1)) {
+  if (digitalRead(sw1)) {
     //Statement to run if button 2 pressed with switch 1 HIGH
     Serial.print(F("Button 2 pressed, switch 1 HIGH, function output2()-1 called\n"));
     Serial.print(F("Blink LED 2x for 1x\n"));
@@ -118,7 +135,7 @@ void output2() {
 }
 
 void output3() {
-  if(digitalRead(sw2)) {
+  if (digitalRead(sw2)) {
     //Statement to run if button 3 pressed with switch 2 HIGH
     Serial.print(F("Button 3 pressed, switch 2 HIGH, function output3()-1 called\n"));
     Serial.print(F("Blink LED 3x for 1x\n"));
@@ -133,7 +150,7 @@ void output3() {
 }
 
 void output4() {
-  if(digitalRead(sw3)) {
+  if (digitalRead(sw3)) {
     //Statement to run if button 4 pressed with switch 3 HIGH
     Serial.print(F("Button 4 pressed, switch 4 HIGH, function output4()-1 called\n"));
     Serial.print(F("Blink LED 4x for 1x\n"));
@@ -160,17 +177,17 @@ void output5() {
 
 void heartbeat(uint8_t n) {
   //Blink indicator LED for n-times
-  while(n>0) {
-    digitalWrite(led,HIGH);
+  while (n > 0) {
+    digitalWrite(led, HIGH);
     delay(10);
-    digitalWrite(led,LOW);
+    digitalWrite(led, LOW);
     delay(100);
     n--;
   }
 }
 
 void debug() {
-  while(1) {
+  while (1) {
     Serial.print(F("bt0=")); Serial.print(digitalRead(bt0)); Serial.print(' ');
     Serial.print(F("bt1=")); Serial.print(digitalRead(bt1)); Serial.print(' ');
     Serial.print(F("bt2=")); Serial.print(digitalRead(bt2)); Serial.print(' ');
